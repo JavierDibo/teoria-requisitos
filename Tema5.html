@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.4"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"list_item","depth":0,"payload":{"lines":[0,1]},"content":"Negociación de requisitos","children":[{"type":"list_item","depth":1,"payload":{"lines":[1,2]},"content":"Introducción","children":[{"type":"list_item","depth":2,"payload":{"lines":[2,3]},"content":"Los conflictos pueden aparecer en cualquier actividad durante la ingeniería de requisitos"}]},{"type":"list_item","depth":1,"payload":{"lines":[3,4]},"content":"Técnicas de negociación","children":[{"type":"list_item","depth":2,"payload":{"lines":[4,5]},"content":"Matriz de interacción","children":[{"type":"list_item","depth":3,"payload":{"lines":[5,6]},"content":"Útil para visualizar conflictos"},{"type":"list_item","depth":3,"payload":{"lines":[6,7]},"content":"Matriz de doble entrada donde ser marca un 1 si los requisitos implicados están en conflicto o un 0 si no."},{"type":"list_item","depth":3,"payload":{"lines":[7,8]},"content":"Al final se obtiene la suma -&gt; Grado conflictividad"}]},{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"Técnica Win-Win","children":[{"type":"list_item","depth":3,"payload":{"lines":[9,10]},"content":"Conseguir equilibrio informativo"},{"type":"list_item","depth":3,"payload":{"lines":[10,11]},"content":"Equilibrio emocional"},{"type":"list_item","depth":3,"payload":{"lines":[11,12]},"content":"Separación entre personas y problemas"},{"type":"list_item","depth":3,"payload":{"lines":[12,13]},"content":"Abiertos a nuevas soluciones"},{"type":"list_item","depth":3,"payload":{"lines":[13,14]},"content":"Regla MAAN (Mejor Alternativa al Acuerdo Negociado)"}]}]},{"type":"list_item","depth":1,"payload":{"lines":[14,15]},"content":"Acticidades de negociación en IR","children":[{"type":"list_item","depth":2,"payload":{"lines":[15,16]},"content":"Identificación de conflictos","children":[{"type":"list_item","depth":3,"payload":{"lines":[16,17]},"content":"No siempre se muestran de manera evidente"},{"type":"list_item","depth":3,"payload":{"lines":[17,18]},"content":"Deben detectarse y corregirse lo antes posible"},{"type":"list_item","depth":3,"payload":{"lines":[18,19]},"content":"El primer paso es identificar los requisitos que presentan conflicto"}]},{"type":"list_item","depth":2,"payload":{"lines":[19,20]},"content":"Análisis de conflictos","children":[{"type":"list_item","depth":3,"payload":{"lines":[20,21]},"content":"Hay que determinar el tipo de conflicto:"},{"type":"list_item","depth":3,"payload":{"lines":[21,22]},"content":"Conflicto de datos: Falta de info."},{"type":"list_item","depth":3,"payload":{"lines":[22,23]},"content":"Conflicto de intereses: los stakes tienen diferentes intereses"},{"type":"list_item","depth":3,"payload":{"lines":[23,24]},"content":"Conflicto de valores: Diferentes criterios para evaluar un asunto"},{"type":"list_item","depth":3,"payload":{"lines":[24,25]},"content":"Conflicto de relaciones: comportamientos interpersonales negativos entre stakes"},{"type":"list_item","depth":3,"payload":{"lines":[25,26]},"content":"Conflicto estructural: diferencias jerárquicas entre stakes"}]},{"type":"list_item","depth":2,"payload":{"lines":[26,27]},"content":"Resolución de conflictos","children":[{"type":"list_item","depth":3,"payload":{"lines":[27,28]},"content":"Hay 3 estrategias"},{"type":"list_item","depth":3,"payload":{"lines":[28,29]},"content":"Negociación: las partes se ponen de acuerdo mediante comunicación"},{"type":"list_item","depth":3,"payload":{"lines":[29,30]},"content":"Solución creativa: los puntos de vista originales se descartan y se construye una solución que armonice los distintos puntos de vista"},{"type":"list_item","depth":3,"payload":{"lines":[30,31]},"content":"Decisión: una autoridad toma una decisión"}]},{"type":"list_item","depth":2,"payload":{"lines":[31,32]},"content":"Documentación de conflictos resueltos"}]}]},{})</script>
+</body>
+</html>

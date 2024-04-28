@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.4"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"list_item","depth":0,"payload":{"lines":[0,1]},"content":"Contexto y límites del sistema.","children":[{"type":"list_item","depth":1,"payload":{"lines":[1,2]},"content":"Introducción","children":[{"type":"list_item","depth":2,"payload":{"lines":[2,3]},"content":"El analista está en la fase de adquisición de requisitos."},{"type":"list_item","depth":2,"payload":{"lines":[3,4]},"content":"Tiene que descubrir los aspectos que son relevantes para la construcción del sistema"},{"type":"list_item","depth":2,"payload":{"lines":[4,5]},"content":"Como es una tarea compleja, debemos CLASIFICAR Y ORGANIZAR el entorno para manejar el problema mejor."}]},{"type":"list_item","depth":1,"payload":{"lines":[5,6]},"content":"Contexto del sistema","children":[{"type":"list_item","depth":2,"payload":{"lines":[6,7]},"content":"Es la parte del entorno que es relevante para la solución del problema."},{"type":"list_item","depth":2,"payload":{"lines":[7,8]},"content":"Límite del sistema: Mediante este límite separamos los aspectos que pertenecen al sistema de aquellos que se encuentran fuera."},{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"Límite de contexto: Esta parte separa el contexto del sistema de la parte del entorno que se considera irrelevante para el sistema."},{"type":"list_item","depth":2,"payload":{"lines":[9,10]},"content":"Los límites no tienen que estar perfectamente definidos desde el principio, pueden ir cambiando."},{"type":"list_item","depth":2,"payload":{"lines":[10,11]},"content":"Hay dos dimensiones, tipos y facetas PROPÓSITO-&gt; Evitar la omisión de aspectos relevantes y planificar las rareas a expertos de cada faceta"}]},{"type":"list_item","depth":1,"payload":{"lines":[11,12]},"content":"Tipos de aspectos del contexto","children":[{"type":"list_item","depth":2,"payload":{"lines":[12,13]},"content":"Fuentes de requisitos","children":[{"type":"list_item","depth":3,"payload":{"lines":[13,14]},"content":"Stakeholders: tienen conocimiento acerca de aspectos del contexto"},{"type":"list_item","depth":3,"payload":{"lines":[14,15]},"content":"Documentación existente: documentos que incluye info relevante (leyes, manuales estándares...)"},{"type":"list_item","depth":3,"payload":{"lines":[15,16]},"content":"Sistemas existentes sistemas relevantes para los requisitos del sistema en desarrollo."}]},{"type":"list_item","depth":2,"payload":{"lines":[16,17]},"content":"Objetos del contexto","children":[{"type":"list_item","depth":3,"payload":{"lines":[17,18]},"content":"Personas o grupos de personas (que tengan que estar representados dentro del sistema)"},{"type":"list_item","depth":3,"payload":{"lines":[18,19]},"content":"Objetos materiales: productos, materias primas..."},{"type":"list_item","depth":3,"payload":{"lines":[19,20]},"content":"Objetos inmateriales: pedidos, facturas, procesos de fabricación, leyes..."}]},{"type":"list_item","depth":2,"payload":{"lines":[20,21]},"content":"Propiedades y relaciones entre objetos","children":[{"type":"list_item","depth":3,"payload":{"lines":[21,22]},"content":"Es para descubrir los requisitos del sistema"}]},{"type":"list_item","depth":2,"payload":{"lines":[22,23]},"content":"Facetas del contexto (Tratamos de abarcar todas las fuente de información)","children":[{"type":"list_item","depth":3,"payload":{"lines":[23,24]},"content":"Faceta de dominio (Aspectos conceptuales del Dominio del problema, se concentra en los conceptos que va a manejar el sistema)"},{"type":"list_item","depth":3,"payload":{"lines":[24,25]},"content":"Faceta de utilización (Son considerados aspectos que conciernen a la solución en vías de desarrollo)"},{"type":"list_item","depth":3,"payload":{"lines":[25,26]},"content":"Faceta de aspectos tecnológicos (Se consideran todos los aspectos que se refieren al entorno tecnológico, hard/software, protocolos...)"},{"type":"list_item","depth":3,"payload":{"lines":[26,27]},"content":"Faceta en proceso de desarrollo (Se consideran los aspectos del contexto relativos al proceso de desarrollo del sistema)"}]}]}]},{})</script>
+</body>
+</html>
